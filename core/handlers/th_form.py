@@ -65,7 +65,9 @@ async def get_num(message: Message, state: FSMContext, bot):
                              reply_markup=keyboard_nazad)
         await state.set_state(StepsForm3.GET_NUM)
     else:
-        await bot.send_message(ADMIN_ID, text=data)
+        await bot.send_message(ADMIN_1, text=data)
+        await bot.send_message(ADMIN_2, text=data)
+        await bot.send_message(ADMIN_3, text=data)
         await message.answer(
             f"Ваше предложение отправлено, спасибо! 😇",
             reply_markup=adm)
