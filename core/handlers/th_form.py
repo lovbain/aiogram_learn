@@ -3,7 +3,7 @@ from aiogram.fsm.context import FSMContext
 from core.utils.statesform import StepsForm3
 from core.filters.zapret import zapret
 from core.keyboards.reply import adm, keyboard_nazad
-from index import ADMIN_ID
+from index import ADMIN_ID, ADMIN_1, ADMIN_2, ADMIN_3
 
 
 async def get_th(message: Message, state: FSMContext):
@@ -16,7 +16,6 @@ async def get_th(message: Message, state: FSMContext):
 
 async def get_th_form(message: Message, state: FSMContext):
     spisok = message.text.split(' ')
-    print(spisok)
     count = 0
     count1 = 0
     for slova in spisok:
